@@ -1,7 +1,7 @@
 import requests
 
 from src.main.sdk import APIConfig
-from src.main.sdk import ZaloBaseClient
+from src.main.sdk.ZaloBaseClient import ZaloBaseClient
 
 
 class Zalo3rdAppClient(ZaloBaseClient):
