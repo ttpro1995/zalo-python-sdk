@@ -75,7 +75,7 @@ send_message = zalo_3rd_app_client.post('/me/message', token, {
 
 **Create an instance of the ZaloOA class**
 ```
-zalo_info = ZaloOaInfo(oa_id="put_your_oauth_code_here", secret_key="put_your_secret_key_h")
+zalo_info = ZaloOaInfo(oa_id="put_your_oauth_code_here", secret_key="put_your_secret_key_here")
 zalo_oa_client = ZaloOaClient(zalo_info)
 ```
 
@@ -86,7 +86,10 @@ profile = zalo_oa_client.get('/getprofile', {'uid': user_id})
 
 **Send text message**
 ```id
-send_text_message = zalo_oa_client.post('/sendmessage/text', {'uid': 'user_id', 'message': 'put_your_message_h'})
+send_text_message = zalo_oa_client.post('/sendmessage/text', {
+    'uid': user_id,
+    'message': 'put_your_message_here'
+})
 ```
 
 **Get message status**
@@ -176,7 +179,10 @@ send_message_customer_care_by_user_id = zalo_oa_client.post('/sendmessage/cs', {
 
 **Gửi tin nhắn Sticker**
 ```
-send_sticker_message = zalo_oa_client.post('/sendmessage/sticker', {'uid': user_id, 'stickerid': 'sticker_id'})
+send_sticker_message = zalo_oa_client.post('/sendmessage/sticker', {
+    'uid': user_id,
+    'stickerid': 'sticker_id'
+})
 ```
 
 **Trả lời tin nhắn dạng text**
