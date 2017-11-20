@@ -1,11 +1,11 @@
-# Zalo SDK for P (v1)
+# Zalo SDK for Python (v1)
 
 [![N|Solid](https://developers.zalo.me/web/static/prodution/images/logo.png)](https://nodesource.com/products/nsolid)
 
 ## Installation
 You can easily install this package by using pip
 ```
-pip install zalo-python-s
+pip install zalo-python-sdk
 ```
 
 ## How to use
