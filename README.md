@@ -174,6 +174,44 @@ send_message_customer_care_by_user_id = zalo_oa_client.post('/sendmessage/cs', {
 })
 ```
 
+**Gửi tin nhắn Sticker**
+```
+send_sticker_message = zalo_oa_client.post('/sendmessage/sticker', {'uid': user_id, 'stickerid': 'sticker_id'})
+```
+
+**Trả lời tin nhắn dạng text**
+```
+reply_text_message = zalo_oa_client.post('/sendmessage/reply/text', {
+    'msgid': 'msg_id',
+    'message': 'put_your_message_here'
+})
+```
+
+**Trả lời tin nhắn dạng hình**
+```
+reply_image_message = zalo_oa_client.post('/sendmessage/reply/image', {
+    'msgid': 'msg_id',
+    'imageid': 'image_id',
+    'message': 'put_your_message_here'
+})
+```
+
+**Trả lời tin nhắn dạng liên kết**
+```java
+reply_link_message = zalo_oa_client.post('/sendmessage/reply/links', {
+    'msgid': 'msg_id',
+    'links': ''
+})
+```
+
+**Tạo QR Code**
+```java
+qrcode = zalo_oa_client.post('/qrcode', {
+    'qrcode': 'qrcode',
+    'size': ''
+})
+```
+
 ## Authors
 
 * **NtkDuy**
