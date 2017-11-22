@@ -26,3 +26,12 @@ class ZaloBaseClient():
         if response.status_code != 200:
             raise APIException(response.text, response.status_code)
         return response.json()
+
+    def load_file(self, path):
+        if 'http' in path:
+            file = requests.get(path, stream=True).content
+        else:
+            file = open(path, 'rb').read()
+        if len(file) > APIConfig.MAXIMUM_FILE_SIZE:
+            raise APIException("file size exceeded the maximum size permitted")
+        return file
