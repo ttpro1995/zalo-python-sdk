@@ -11,44 +11,27 @@ class ZaloStoreOnbehalfClient(ZaloBaseClient):
     def __init__(self, app_info):
         self.app_info = app_info
 
+    def get_login_url(self):
+        login_endpoint = "https://oauth.zaloapp.com/page/login?app_id=%s&redirect_uri=%s" % (
+            self.app_info.app_id, self.app_info.callback_url)
+        return login_endpoint
+
     def get(self, url, data):
         endpoint = "%s/%s/%s" % (APIConfig.DEFAULT_OA_API_BASE, APIConfig.DEFAULT_OA_API_VERSION, url)
-        params = self.create_params(data)
+        params = self.create_on_behalf_params(data, self.app_info)
         return self.send_request(endpoint, params, 'GET')
 
     def post(self, url, data):
         endpoint = "%s/%s/%s" % (APIConfig.DEFAULT_OA_API_BASE, APIConfig.DEFAULT_OA_API_VERSION, url)
-        print endpoint
         if 'file' in data:
-            print data['file']
-            file = self.load_file(data['file'])
+            file = self.load_file(data.pop('file', None))
             timestamp = int(round(time.time() * 1000))
             params = {
                 'appid': self.app_info.app_id,
-                'data': data['accessTok'],
+                'data': json.dumps(data),
                 'timestamp': timestamp,
-                'mac': MacUtils.build_mac(self.app_info.app_id, data, timestamp, self.app_info.secret_key)
+                'mac': MacUtils.build_mac(self.app_info.app_id, json.dumps(data), timestamp, self.app_info.secret_key)
             }
-
             return self.upload_file(endpoint, params, file)
-        params = self.create_params(data)
+        params = self.create_on_behalf_params(data, self.app_info)
         return self.send_request(endpoint, params, 'POST')
-
-    def create_params(self, data):
-        timestamp = int(round(time.time() * 1000))
-
-        mac_content = ''
-        for key, value in data.items():
-            if type(value) is dict:
-                data[key] = json.dumps(value)
-            mac_content = data[key]
-
-        params = {
-            'appid': self.app_info.app_id,
-            'timestamp': timestamp,
-            'mac': MacUtils.build_mac(self.app_info.app_id, mac_content, timestamp, self.app_info.secret_key)
-        }
-
-        params.update(data)
-        print params
-        return params
