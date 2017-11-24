@@ -5,14 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0820d0d1-efee-4fa6-9a0d-17fed1e45a6f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/test/Zalo3rdAppSDK/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/test/ZaloOaSDK/ZaloOaSDK.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/test/ZaloOaSDK/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/test/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/APIConfig.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/APIException.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/ZaloBaseClient.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/app/Zalo3rdAppClient.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/app/ZaloAppInfo.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/app/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/oa/ZaloOaClient.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/oa/ZaloOaInfo.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/oa/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/utils/MacUtils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/zalo/sdk/utils/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/zalo_python_sdk-1.13-py2.py3-none-any.whl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/Zalo3rdAppSDK/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/ZaloOaSDK/__init__.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/Zalo3rdAppSDK/Zalo3rdAppSDK.py" afterPath="$PROJECT_DIR$/test/Zalo3rdAppSDK.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/ZaloOaSDK/ZaloOaSDK.py" afterPath="$PROJECT_DIR$/test/ZaloOaSDK.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ZaloArticleSDK.py" afterPath="$PROJECT_DIR$/test/ZaloArticleSDK.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ZaloOaSDK/ZaloOaSDK.py" afterPath="$PROJECT_DIR$/test/ZaloOaSDK/ZaloOaSDK.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ZaloStoreSDK.py" afterPath="$PROJECT_DIR$/test/ZaloStoreSDK.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zalo/sdk/ZaloBaseClient.py" afterPath="$PROJECT_DIR$/zalo/sdk/ZaloBaseClient.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zalo/sdk/article/ZaloArticleClient.py" afterPath="$PROJECT_DIR$/zalo/sdk/article/ZaloArticleClient.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zalo/sdk/store/ZaloStoreClient.py" afterPath="$PROJECT_DIR$/zalo/sdk/store/ZaloStoreClient.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zalo/sdk/oa/ZaloOaClient.py" afterPath="$PROJECT_DIR$/zalo/sdk/oa/ZaloOaClient.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zalo/sdk/oa/ZaloOaOnbehalf.py" afterPath="$PROJECT_DIR$/zalo/sdk/oa/ZaloOaOnbehalf.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zalo/sdk/store/ZaloStoreOnbehalfClient.py" afterPath="$PROJECT_DIR$/zalo/sdk/store/ZaloStoreOnbehalfClient.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,21 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ZaloOaClient.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zalo/sdk/oa/ZaloOaClient.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="50" column="42" lean-forward="true" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ZaloBaseClient.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zalo/sdk/ZaloBaseClient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1116">
-              <caret line="62" column="12" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+            <state relative-caret-position="255">
+              <caret line="28" column="111" lean-forward="false" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -49,8 +59,8 @@
       <file leaf-file-name="ZaloOaOnbehalf.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zalo/sdk/oa/ZaloOaOnbehalf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="34" />
+            <state relative-caret-position="252">
+              <caret line="20" column="65" lean-forward="false" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -60,11 +70,31 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="10710">
-                <caret line="596" column="91" lean-forward="false" selection-start-line="596" selection-start-column="91" selection-end-line="596" selection-end-column="91" />
+              <first_editor relative-caret-position="-12588">
+                <caret line="196" column="52" lean-forward="false" selection-start-line="196" selection-start-column="52" selection-end-line="196" selection-end-column="52" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,35 +114,10 @@
       <file leaf-file-name="ZaloStoreOnbehalfClient.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zalo/sdk/store/ZaloStoreOnbehalfClient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+            <state relative-caret-position="468">
+              <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="31" selection-end-column="59" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZaloArticleSDK.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/ZaloArticleSDK.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="108" selection-end-column="2" />
-              <folding>
-                <element signature="e#15#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZaloStoreSDK.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/ZaloStoreSDK.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="178" selection-end-column="91" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-                <marker date="1511507691932" expanded="true" signature="345:474" ph="..." />
               </folding>
             </state>
           </provider>
@@ -135,6 +140,7 @@
       <find>login</find>
       <find>API_OA_STORE_ONBEHALF_GET_SLICE_PRODUCT</find>
       <find>API_OA_STORE_ONBEHALF_UPDATE_ORDER</find>
+      <find>/sendmessage/image</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,18 +176,18 @@
         <option value="$PROJECT_DIR$/build/lib/src/main/sdk/oa/ZaloOaClient.py" />
         <option value="$PROJECT_DIR$/test/Zalo3rdAppSDK/Zalo3rdAppSDK.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/zalo/sdk/oa/ZaloOaOnbehalf.py" />
         <option value="$PROJECT_DIR$/zalo/sdk/app/Zalo3rdAppClient.py" />
-        <option value="$PROJECT_DIR$/zalo/sdk/oa/ZaloOaClient.py" />
         <option value="$PROJECT_DIR$/zalo/sdk/utils/MacUtils.py" />
         <option value="$PROJECT_DIR$/zalo/sdk/store/ZaloArticleClient.py" />
         <option value="$PROJECT_DIR$/zalo/sdk/store/ZaloStoreClient.py" />
-        <option value="$PROJECT_DIR$/test/ZaloOaSDK/ZaloOaSDK.py" />
-        <option value="$PROJECT_DIR$/zalo/sdk/store/ZaloStoreOnbehalfClient.py" />
         <option value="$PROJECT_DIR$/zalo/sdk/article/ZaloArticleClient.py" />
-        <option value="$PROJECT_DIR$/zalo/sdk/ZaloBaseClient.py" />
         <option value="$PROJECT_DIR$/test/ZaloArticleSDK.py" />
+        <option value="$PROJECT_DIR$/zalo/sdk/ZaloBaseClient.py" />
+        <option value="$PROJECT_DIR$/zalo/sdk/oa/ZaloOaClient.py" />
+        <option value="$PROJECT_DIR$/zalo/sdk/store/ZaloStoreOnbehalfClient.py" />
         <option value="$PROJECT_DIR$/test/ZaloStoreSDK.py" />
+        <option value="$PROJECT_DIR$/zalo/sdk/oa/ZaloOaOnbehalf.py" />
+        <option value="$PROJECT_DIR$/test/ZaloOaSDK/ZaloOaSDK.py" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -219,24 +225,7 @@
             <path>
               <item name="ZaloPythonSDK" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZaloPythonSDK" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZaloPythonSDK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZaloPythonSDK" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZaloPythonSDK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZaloPythonSDK" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="Zalo3rdAppSDK" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZaloPythonSDK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZaloPythonSDK" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="ZaloOaSDK" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ZaloPythonSDK" type="b2602c69:ProjectViewProjectNode" />
@@ -288,7 +277,11 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/zalo" />
       <recent name="$PROJECT_DIR$/src/main" />
@@ -306,7 +299,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ZaloStoreSDK (1)">
+  <component name="RunManager" selected="Python.ZaloOaSDK (1)">
     <configuration name="Zalo3rdAppSDK (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -336,7 +329,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ZaloPythonSDK" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/Zalo3rdAppSDK/Zalo3rdAppSDK.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/Zalo3rdAppSDK.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -353,7 +346,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ZaloPythonSDK" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/ZaloOaSDK/ZaloOaSDK.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/ZaloOaSDK.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -401,9 +394,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ZaloStoreSDK (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ZaloStoreSDK" />
-        <item index="2" class="java.lang.String" itemvalue="Python.ZaloOaSDK (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ZaloOaSDK (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ZaloStoreSDK (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ZaloStoreSDK" />
         <item index="3" class="java.lang.String" itemvalue="Python.Zalo3rdAppSDK (2)" />
         <item index="4" class="java.lang.String" itemvalue="Python.Zalo3rdAppSDK (1)" />
       </list>
@@ -511,13 +504,6 @@
     <entry file="file://$PROJECT_DIR$/zalo/sdk/ZaloBaseClient.py" />
     <entry file="file://$PROJECT_DIR$/src/main/com/vng/zalo/sdk/app/APIException.py" />
     <entry file="file://$PROJECT_DIR$/src/main/com/vng/zalo/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/test/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zalo/sdk/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -556,14 +542,6 @@
     <entry file="file://$PROJECT_DIR$/build/lib.linux-x86_64-2.7/src/main/sdk/app/ZaloAppInfo.py" />
     <entry file="file://$PROJECT_DIR$/build/lib.linux-x86_64-2.7/src/main/sdk/app/Zalo3rdAppClient.py" />
     <entry file="file://$PROJECT_DIR$/build/lib/src/main/sdk/oa/ZaloOaClient.py" />
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Zalo3rdAppSDK/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -610,14 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Zalo3rdAppSDK/Zalo3rdAppSDK.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="3" column="84" lean-forward="false" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zalo/sdk/store/ZaloStoreClient.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -634,21 +604,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ZaloOaSDK/ZaloOaSDK.py">
+    <entry file="file://$PROJECT_DIR$/zalo/sdk/oa/ZaloOaClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="102" column="33" lean-forward="false" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="33" />
+        <state relative-caret-position="342">
+          <caret line="27" column="102" lean-forward="false" selection-start-line="27" selection-start-column="102" selection-end-line="27" selection-end-column="102" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zalo/sdk/store/ZaloStoreOnbehalfClient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,11 +624,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zalo/sdk/ZaloBaseClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="62" column="12" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+        <state relative-caret-position="255">
+          <caret line="28" column="111" lean-forward="false" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ZaloStoreSDK.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="241" column="3" lean-forward="true" selection-start-line="241" selection-start-column="3" selection-end-line="241" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -676,28 +644,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="108" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zalo/sdk/oa/ZaloOaOnbehalf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="20" column="65" lean-forward="false" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zalo/sdk/store/ZaloStoreOnbehalfClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="31" selection-end-column="59" />
           <folding>
-            <element signature="e#15#60#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ZaloStoreSDK.py">
+    <entry file="file://$PROJECT_DIR$/test/ZaloOaSDK.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="178" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-            <marker date="1511507691932" expanded="true" signature="345:474" ph="..." />
-          </folding>
+        <state relative-caret-position="244">
+          <caret line="112" column="44" lean-forward="false" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="10710">
-            <caret line="596" column="91" lean-forward="false" selection-start-line="596" selection-start-column="91" selection-end-line="596" selection-end-column="91" />
+          <first_editor relative-caret-position="-12588">
+            <caret line="196" column="52" lean-forward="false" selection-start-line="196" selection-start-column="52" selection-end-line="196" selection-end-column="52" />
             <folding />
           </first_editor>
           <second_editor />
@@ -709,18 +690,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zalo/sdk/oa/ZaloOaOnbehalf.py">
+    <entry file="file://$PROJECT_DIR$/test/Zalo3rdAppSDK.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="34" />
+        <state relative-caret-position="157">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zalo/sdk/oa/ZaloOaClient.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="50" column="42" lean-forward="true" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+        <state relative-caret-position="90">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

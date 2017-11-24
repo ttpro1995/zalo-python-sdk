@@ -9,35 +9,35 @@ pip install zalo-python-sdk
 ```
 
 ## How to use
-**Create an instance of the Zalo class**
+**Khởi tạo Zalo3rdAppClient**
 ```
 zalo_info = ZaloAppInfo(app_id=your app id, secret_key="your app secret")
 zalo_3rd_app_client = Zalo3rdAppClient(zalo_info)
 ```
 
 ## Social API
-**Get Login Url**
+**Lấy LoginUrl**
 ```
 login_url = zalo_3rd_app_client.get_login_url()
 ```
 
-**Get AccessToken**
+**Lấy AccessToken**
 ```
 code = 'put_your_code_here'
 access_token = zalo_3rd_app_client.get_access_token(code)
 ```
 
-**Get User Information**
+**Thông tin người dùng**
 ```
 profile = zalo_3rd_app_client.get('/me', token, {'fields': 'id, name, birthday, gender, picture'})
 ```
 
-**Get Friends List Used App**
+**Lấy danh sách tất cả bạn bè của người dùng đã sử dụng ứng dụng**
 ```
 friends = zalo_3rd_app_client.get('/me/friends', token, {'offset': 10, 'limit': 50})
 ```
 
-**Get Friends List UnUse App & Can Send Invite Message**
+**Lấy danh sách bạn bè chưa sử dụng ứng dụng và có thể nhắn tin mời sử dụng ứng dụng**
 ```
 invitable_friends = zalo_3rd_app_client.get('/me/invitable_friends', token, {
     'offset': '0',
@@ -46,7 +46,7 @@ invitable_friends = zalo_3rd_app_client.get('/me/invitable_friends', token, {
 })
 ```
 
-**Post feed**
+**Đăng bài viết**
 ```
 post_feed = zalo_3rd_app_client.post('/me/feed', token, {
     'message': 'put_your_message_here',
@@ -54,7 +54,7 @@ post_feed = zalo_3rd_app_client.post('/me/feed', token, {
 })
 ```
 
-**Send Invite To User To Use The App**
+**Mời sử dụng ứng dụng**
 ```
 send_app_request = zalo_3rd_app_client.post('/apprequests', token, {
     'message': 'put_your_message_here',
@@ -62,7 +62,7 @@ send_app_request = zalo_3rd_app_client.post('/apprequests', token, {
 })
 ```
 
-**Send A Message To Friends**
+**Gởi tin nhắn tới bạn bè**
 ```
 send_message = zalo_3rd_app_client.post('/me/message', token, {
     'message': 'put_your_message_here',
@@ -73,52 +73,70 @@ send_message = zalo_3rd_app_client.post('/me/message', token, {
 
 ## Official Account Open API
 
-**Create an instance of the ZaloOA class**
+**Khởi tạo ZaloOA**
 ```
 zalo_info = ZaloOaInfo(oa_id="put_your_oauth_code_here", secret_key="put_your_secret_key_here")
 zalo_oa_client = ZaloOaClient(zalo_info)
 ```
 
-**Get Profile Follower**
+**Lấy thông tin người theo dõi**
 ```
 profile = zalo_oa_client.get('/getprofile', {'uid': user_id})
 ```
 
-**Send text message**
+**Gửi tin nhắn text**
 ```id
-send_text_message = zalo_oa_client.post('/sendmessage/text', {
+data = {
     'uid': user_id,
-    'message': 'put_your_message_here'
-})
+    'message': 'hello there'
+}
+params = {'data': data}
+send_text_message = zalo_oa_client.post('/sendmessage/text', params)
 ```
 
-**Get message status**
+**Lấy trạng thái tin nhắn**
 ```
 message_status = zalo_oa_client.get('/getmessagestatus', {'msgid': 'message_id'})
 ```
 
-**Upload image**
+**Upload hình ảnh**
 ```
-path = "path_to_your_image"
 upload_photo_from_path = zalo_oa_client.post('/upload/image', {'file': path})
 ```
 
-**Upload Image Gif**
+**Upload ảnh Gìf**
 ```
-path = "path_to_your_image"
 upload_gif = zalo_oa_client.post('/upload/gif', {'file': path})
 ```
 
-**Send image message**
+**Gửi tin nhắn hình**
 ```
-send_image_message = zalo_oa_client.post('/sendmessage/image', {
+data = {
     'uid': user_id,
     'imageid': image_id,
-    'message': 'put_your_message_h'
-})
+    'message': 'team secret'
+}
+params = {
+    'data': data
+}
+send_image_message = zalo_oa_client.post('/sendmessage/image', params)
 ```
 
-**Send link message**
+**Gửi tin nhắn ảnh Gif**
+```
+data = {
+    'uid': user_id,
+    'width': 10,
+    'height': 20,
+    'imageid': gif_id
+}
+params = {
+    'data': data
+}
+send_gif_message = zalo_oa_client.post('/sendmessage/gif', params)
+```
+
+**Gửi tin nhắn dạng liên kết**
 ```
 links = [{
     'link': 'https://developers.zalo.me/',
@@ -126,13 +144,17 @@ links = [{
     'linkdes': 'Document For Developers',
     'linkthumb': 'https://developers.zalo.me/web/static/images/bg.jpg'
 }]
-send_link_message = zalo_oa_client.post('/sendmessage/links', {
+data = {
     'uid': user_id,
     'links': links
-})
+}
+params = {
+    'data': data
+}
+send_link_message = zalo_oa_client.post('/sendmessage/links', params)
 ```
 
-**Send interaction message**
+**Gửi tin nhắn tương tác**
 ```
 action_list = [{
     'action': 'oa.open.inapp',
@@ -148,74 +170,95 @@ action_list = [{
         'cancel': 'cancel'
     }
 }]
-send_action_message = zalo_oa_client.post('/sendmessage/actionlist', {
+data = {
     'uid': user_id,
     'actionlist': action_list
-})
+}
+params = {
+    'data': data
+}
+send_action_message = zalo_oa_client.post('/sendmessage/actionlist', params)
 ```
 
-**Get profile user followed OA**
+**Gửi tin nhắn chăm sóc khách hàng**
 ```
-profile = zalo_oa_client.get('/getprofile', {'uid': user_id})
-```
-
-**Send customer care message**
-```
-send_message_customer_care_by_phone = zalo_oa_client.post('/sendmessage/phone/cs', {
-    'phone': phone,
-    'templateid': template_id,
-    'templatedata': data
-})
-```
-
-**Send customer care message by phone number**
-```
-send_message_customer_care_by_user_id = zalo_oa_client.post('/sendmessage/cs', {
+templatedata = {
+    "content":"Chào bạn, Chúc bạn một ngày vui vẻ!"
+}
+data = {
     'uid': user_id,
     'templateid': template_id,
-    'templatedata': data
-})
+    'templatedata': templatedata
+}
+params = {'data': data}
+send_message_customer_care_by_user_id = zalo_oa_client.post('/sendmessage/cs', params)
+```
+
+**Gửi tin nhắn chăm sóc khách hàng tới số điện thoại**
+```
+templatedata = {
+    "content":"Chào bạn, Chúc bạn một ngày vui vẻ!"
+}
+data = {
+    'phone': phone,
+    'templateid': template_id,
+    'templatedata': templatedata
+}
+params = {
+    'data': data
+}
+send_message_customer_care_by_phone = zalo_oa_client.post('/sendmessage/phone/cs', params)
 ```
 
 **Gửi tin nhắn Sticker**
 ```
-send_sticker_message = zalo_oa_client.post('/sendmessage/sticker', {
+data = {
     'uid': user_id,
     'stickerid': 'sticker_id'
-})
+}
+params = {'data': data}
+send_sticker_message = zalo_oa_client.post('/sendmessage/sticker', params)
 ```
 
 **Trả lời tin nhắn dạng text**
 ```
-reply_text_message = zalo_oa_client.post('/sendmessage/reply/text', {
+data = {
     'msgid': 'msg_id',
     'message': 'put_your_message_here'
-})
+}
+params = {'data': data}
+reply_text_message = zalo_oa_client.post('/sendmessage/reply/text', params)
 ```
 
 **Trả lời tin nhắn dạng hình**
 ```
-reply_image_message = zalo_oa_client.post('/sendmessage/reply/image', {
+data = {
     'msgid': 'msg_id',
     'imageid': 'image_id',
     'message': 'put_your_message_here'
-})
+}
+params = {'data': data}
+reply_image_message = zalo_oa_client.post('/sendmessage/reply/image', params)
 ```
 
 **Trả lời tin nhắn dạng liên kết**
-```java
-reply_link_message = zalo_oa_client.post('/sendmessage/reply/links', {
+```
+data = {
     'msgid': 'msg_id',
     'links': ''
-})
+}
+params = {'data': data}
+reply_link_message = zalo_oa_client.post('/sendmessage/reply/links', params)
 ```
 
 **Tạo QR Code**
-```java
-qrcode = zalo_oa_client.post('/qrcode', {
-    'qrcode': 'qrcode',
-    'size': ''
-})
+```
+data = {
+    'qrdata': 'qrcode',
+    'size': 10
+}
+params = {'data': data}
+qrcode = zalo_oa_client.post('/qrcode', params)
 ```
 
 ## Official Account Open API Onbehalf
@@ -238,70 +281,84 @@ login_url = zalo_oa_on_behalf.get_login_url()
 
 **Lấy thông tin người quan tâm**
 ```
-on_behalf_profile = zalo_oa_on_behalf.get('/onbehalf/getprofile', {
+data = {
     'uid': user_id,
     'accessTok': access_token
-})
+}
+params = {'data': data}
+on_behalf_profile = zalo_oa_on_behalf.get('/onbehalf/getprofile', params)
 ```
 
 **Lấy thông tin OA**
 ```
-on_behalf_oa = zalo_oa_on_behalf.get('/onbehalf/getoa', {
+data = {
     'accessTok': access_token
-})
+}
+params = {'data': data}
+on_behalf_oa = zalo_oa_on_behalf.get('/onbehalf/getoa', params)
 ```
 
 **Lấy đoạn hội thoại giữa người quan tâm và OA**
 ```
-on_behalf_conversation = zalo_oa_on_behalf.get('/onbehalf/conversation', {
+data = {
     'offset':0,
     'count': 1,
     'uid': user_id,
     'accessTok': access_token
-})
+}
+params = {'data': data}
+on_behalf_conversation = zalo_oa_on_behalf.get('/onbehalf/conversation', params)
 ```
 
 **Lấy danh sách người quan tâm vừa chat với OA**
 ```
-on_behalf_listrecentchat = zalo_oa_on_behalf.get('/onbehalf/listrecentchat', {
+data = {
     'offset':0,
     'count': 1,
     'accessTok': access_token
-})
+}
+params = {'data': data}
+on_behalf_listrecentchat = zalo_oa_on_behalf.get('/onbehalf/listrecentchat', params)
 ```
 
 **Gửi tin nhắn dạng text**
 ```
-on_behalf_send_text_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/text', {
+data = {
     'uid': user_id,
     'message': 'test',
     'accessTok': access_token
-})
+}
+params = {'data': data}
+on_behalf_send_text_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/text', params)
 ```
 
 **Gửi tin nhắn dạng hình**
-```php
-on_behalf_send_image_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/image', {
+```
+data = {
     'uid': user_id,
     'imageid': image_id,
     'message': 'Your image',
     'accessTok': access_token
-})
+}
+params = {'data': data}
+on_behalf_send_image_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/image', params)
 ```
 
 **Gửi tin nhắn dạng liên kết**
-```php
+```
 links = [{
     'link': 'https://developers.zalo.me/',
     'linktitle': 'Zalo For Developers',
     'linkdes': 'Document For Developers',
     'linkthumb': 'https://developers.zalo.me/web/static/images/bg.jpg'
 }]
-send_link_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/links', {
+data = {
     'uid': user_id,
     'links': links,
     'accessTok': access_token
-})
+}
+params = {'data': data}
+send_link_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/links', params)
 ```
 
 **Gửi tin nhắn tương tác**
@@ -320,23 +377,27 @@ action_list = [{
         'cancel': 'cancel'
     }
 }]
-on_behalf_send_action_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/actionlist', {
+data = {
     'uid': user_id,
     'accessTok': access_token,
     'actionlist': action_list
-})
+}
+params = {'data': data}
+on_behalf_send_action_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/actionlist', params)
 ```
 
 **Gửi tin nhắn dạng Gif**
 ```
-gif_id = 'ot3olFyriQpzA+mN7tMBZJz5C23AqUtjv/bJSmu0Eh0='
-on_behalf_send_gif_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/gif', {
+gif_id = '0d5E/ZSJfblTkacuv43H09bfRxUgXcP5+/TuAd7ZPvw='
+data = {
     'uid': user_id,
     'imageid': gif_id,
     'width': 20,
     'height': 30,
     'accessTok': access_token
-})
+}
+params = {'data': data}
+on_behalf_send_gif_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/gif', params)
 ```
 
 **Upload hình**
@@ -357,30 +418,42 @@ on_behalf_upload_gif = zalo_oa_on_behalf.post('/onbehalf/upload/gif', {
 
 **Trả lời tin nhắn dạng text**
 ```
-reply_text_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/reply/text', {
-    'msgid': message_id,
+data = {
+    'msgid': 'c159a5e84961613f3870',
     'message': 'test message',
     'accessTok': access_token
-})
+}
+params = {'data': data}
+reply_text_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/reply/text', params)
 ```
 
 **Trả lời tin nhắn dạng hình**
 ```
-reply_image_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/reply/image', {
-    'msgid': message_id,
+data = {
+    'msgid': 'c159a5e84961613f3870',
     'message': 'test message',
     'imageid': image_id,
     'accessTok': access_token
-})
+}
+params = {'data': data}
+reply_image_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/reply/image', params)
 ```
 
 **Trả lời tin nhắn dạng liên kết**
 ```
-reply_link_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/reply/links', {
+links = [{
+    'link': 'https://developers.zalo.me/',
+    'linktitle': 'Zalo For Developers',
+    'linkdes': 'Document For Developers',
+    'linkthumb': 'https://developers.zalo.me/web/static/images/bg.jpg'
+}]
+data = {
     'msgid': message_id,
     'links': links,
     'accessTok': access_token
-})
+}
+params = {'data': data}
+reply_link_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/reply/links', params)
 ```
 
 ## Store API

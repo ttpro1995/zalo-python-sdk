@@ -174,12 +174,12 @@ product_id = 'f2db968cb2c95b9702d8'
 # update_product = zalo_store_on_behalf_client.post('/store/onbehalf/product/create', params)
 # print update_product
 
-data = {'productid': product_id, 'accessTok': access_token}
-params = {'data': data}
-remove_product = zalo_store_on_behalf_client.post('/store/onbehalf/product/remove', params)
-print remove_product
-
-
+# data = {'productid': product_id, 'accessTok': access_token}
+# params = {'data': data}
+# remove_product = zalo_store_on_behalf_client.post('/store/onbehalf/product/remove', params)
+# print remove_product
+#
+#
 # data = {
 #     'offset': 0,
 #     'count': 10,
@@ -188,12 +188,12 @@ print remove_product
 # params = {'data': data}
 # get_list_product = zalo_store_on_behalf_client.get('/store/onbehalf/product/getproductofoa', params)
 # print get_list_product
-# #
-# path_to_product_photo = "/home/cpu10142-local/Downloads/revanon2.jpg"
-# data = {'file': path_to_product_photo, 'accessTok': access_token}
-# upload_photo = zalo_store_on_behalf_client.post('/store/onbehalf/upload/productphoto', data)
-# print upload_photo
 #
+path_to_product_photo = "/home/cpu10142-local/Downloads/revanon2.jpg"
+data = {'file': path_to_product_photo, 'accessTok': access_token}
+upload_photo = zalo_store_on_behalf_client.post('/store/onbehalf/upload/productphoto', data)
+print upload_photo
+
 # category = {
 #     'name': 'put_your_category_name_here',
 #     'desc': 'put_your_description_here',
@@ -228,12 +228,12 @@ print remove_product
 # params = {'data': data}
 # get_list_category = zalo_store_on_behalf_client.get('/store/onbehalf/category/getcategoryofoa', params)
 # print get_list_category
-#
-# path_to_product_photo = "/home/cpu10142-local/Downloads/revanon2.jpg"
-# data = {'file': path_to_product_photo, 'accessTok': access_token}
-# upload_photo = zalo_store_on_behalf_client.post('/store/onbehalf/upload/categoryphoto', data)
-# print upload_photo
-#
+
+path_to_product_photo = "/home/cpu10142-local/Downloads/revanon2.jpg"
+data = {'file': path_to_product_photo, 'accessTok': access_token}
+upload_photo = zalo_store_on_behalf_client.post('/store/onbehalf/upload/categoryphoto', data)
+print upload_photo
+
 # data = {
 #     'offset': 0,
 #     'count': 10,
@@ -243,8 +243,8 @@ print remove_product
 # params = {'data': data}
 # get_list_order = zalo_store_on_behalf_client.get('/store/onbehalf/order/getorderofoa', params)
 # print get_list_order
-
-order_id = '9541954bac0e45501c1f'
+#
+# order_id = '9541954bac0e45501c1f'
 # data = {
 #     'orderid': order_id,
 #     'status': 2,
@@ -255,7 +255,7 @@ order_id = '9541954bac0e45501c1f'
 # params = {'data': data}
 # update_order = zalo_store_on_behalf_client.post('/store/onbehalf/order/update', params)
 # print update_order
-
+#
 # data = {
 #     'orderid': order_id,
 #     'accessTok': access_token

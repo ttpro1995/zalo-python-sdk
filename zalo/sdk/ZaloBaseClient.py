@@ -27,8 +27,6 @@ class ZaloBaseClient():
 
     def upload_file(self, endpoint, params, file):
         response = requests.post(endpoint, files={'file': file}, data=params, headers=APIConfig.DEFAULT_HEADER)
-        print endpoint
-        print params
         if response.status_code != 200:
             raise APIException(response.text, response.status_code)
         return response.json()

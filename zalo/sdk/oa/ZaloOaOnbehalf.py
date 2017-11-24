@@ -18,29 +18,17 @@ class ZaloOaOnbehalf(ZaloBaseClient):
 
     def get(self, url, data):
         endpoint = "%s/%s/%s" % (APIConfig.DEFAULT_OA_API_BASE, APIConfig.DEFAULT_OA_API_VERSION, url)
-        timestamp = int(round(time.time() * 1000))
-
-        params = {
-            'appid': self.app_info.app_id,
-            'data': json.dumps(data),
-            'timestamp': timestamp,
-            'mac': MacUtils.build_mac(self.app_info.app_id, json.dumps(data), timestamp, self.app_info.secret_key)
-        }
+        params = self.create_on_behalf_params(data, self.app_info)
         return self.send_request(endpoint, params, 'GET')
 
     def post(self, url, data):
         endpoint = "%s/%s/%s" % (APIConfig.DEFAULT_OA_API_BASE, APIConfig.DEFAULT_OA_API_VERSION, url)
-        timestamp = int(round(time.time() * 1000))
-        params = {
-            'appid': self.app_info.app_id,
-            'data': json.dumps(data),
-            'timestamp': timestamp,
-            'mac': MacUtils.build_mac(self.app_info.app_id, json.dumps(data), timestamp, self.app_info.secret_key)
-        }
-
         if 'file' in data:
-            file = self.load_file(data['file'])
-            data.pop('file', None)
+            file = self.load_file(data.pop('file', None))
+            data['data'] = {
+                'accessTok': data.pop('accessTok', None)
+            }
+            params = self.create_on_behalf_params(data, self.app_info)
             return self.upload_file(endpoint, params, file)
-        else:
-            return self.send_request(endpoint, params, 'POST')
+        params = self.create_on_behalf_params(data, self.app_info)
+        return self.send_request(endpoint, params, 'POST')

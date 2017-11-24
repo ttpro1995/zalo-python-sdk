@@ -15,33 +15,19 @@ class ZaloOaClient(ZaloBaseClient):
 
     def get(self, url, data):
         endpoint = "%s/%s/%s" % (APIConfig.DEFAULT_OA_API_BASE, APIConfig.DEFAULT_OA_API_VERSION, url)
-        timestamp = int(round(time.time() * 1000))
-
-        mac_content = ''.join(str(data[key]) for key in data)
-        params = {
-            'oaid': self.oa_info.oa_id,
-            'timestamp': timestamp,
-            'mac': MacUtils.build_mac(self.oa_info.oa_id, mac_content, timestamp, self.oa_info.secret_key)
-        }
-        params.update(data)
+        params = self.create_oa_params(data, self.oa_info)
         return self.send_request(endpoint, params, 'GET')
 
     def post(self, url, data):
         endpoint = "%s/%s/%s" % (APIConfig.DEFAULT_OA_API_BASE, APIConfig.DEFAULT_OA_API_VERSION, url)
-        timestamp = int(round(time.time() * 1000))
-        params = {
-            'oaid': self.oa_info.oa_id,
-            'timestamp': timestamp,
-        }
+        params = self.create_oa_params(data, self.oa_info)
 
         if 'file' in data:
+            timestamp = int(round(time.time() * 1000))
             file = self.load_file(data['file'])
             params['mac'] = MacUtils.build_mac(self.oa_info.oa_id, timestamp, self.oa_info.secret_key)
             return self.upload_file(endpoint, params, file)
         else:
-            data = json.dumps(data)
-            params['data'] = data
-            params['mac'] = MacUtils.build_mac(self.oa_info.oa_id, data, timestamp, self.oa_info.secret_key)
             return self.send_request(endpoint, params, 'POST')
 
     def load_file(self, path):

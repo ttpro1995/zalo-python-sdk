@@ -25,13 +25,10 @@ class ZaloStoreOnbehalfClient(ZaloBaseClient):
         endpoint = "%s/%s/%s" % (APIConfig.DEFAULT_OA_API_BASE, APIConfig.DEFAULT_OA_API_VERSION, url)
         if 'file' in data:
             file = self.load_file(data.pop('file', None))
-            timestamp = int(round(time.time() * 1000))
-            params = {
-                'appid': self.app_info.app_id,
-                'data': json.dumps(data),
-                'timestamp': timestamp,
-                'mac': MacUtils.build_mac(self.app_info.app_id, json.dumps(data), timestamp, self.app_info.secret_key)
+            data['data'] = {
+                'accessTok': data.pop('accessTok', None)
             }
+            params = self.create_on_behalf_params(data, self.app_info)
             return self.upload_file(endpoint, params, file)
         params = self.create_on_behalf_params(data, self.app_info)
         return self.send_request(endpoint, params, 'POST')
