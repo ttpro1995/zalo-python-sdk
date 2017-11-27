@@ -2,11 +2,6 @@ MANIFEST.in
 README.md
 setup.cfg
 setup.py
-test/__init__.py
-test/Zalo3rdAppSDK/Zalo3rdAppSDK.py
-test/Zalo3rdAppSDK/__init__.py
-test/ZaloOaSDK/ZaloOaSDK.py
-test/ZaloOaSDK/__init__.py
 zalo/__init__.py
 zalo/sdk/APIConfig.py
 zalo/sdk/APIException.py
@@ -15,9 +10,15 @@ zalo/sdk/__init__.py
 zalo/sdk/app/Zalo3rdAppClient.py
 zalo/sdk/app/ZaloAppInfo.py
 zalo/sdk/app/__init__.py
+zalo/sdk/article/ZaloArticleClient.py
+zalo/sdk/article/__init__.py
 zalo/sdk/oa/ZaloOaClient.py
 zalo/sdk/oa/ZaloOaInfo.py
+zalo/sdk/oa/ZaloOaOnbehalf.py
 zalo/sdk/oa/__init__.py
+zalo/sdk/store/ZaloStoreClient.py
+zalo/sdk/store/ZaloStoreOnbehalfClient.py
+zalo/sdk/store/__init__.py
 zalo/sdk/utils/MacUtils.py
 zalo/sdk/utils/__init__.py
 zalo_python_sdk.egg-info/PKG-INFO
