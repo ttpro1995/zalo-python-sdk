@@ -11,6 +11,8 @@ pip install zalo-python-sdk
 ## How to use
 **Khởi tạo Zalo3rdAppClient**
 ```
+from zalo.sdk.app import ZaloAppInfo, Zalo3rdAppClient
+
 zalo_info = ZaloAppInfo(app_id=your app id, secret_key="your app secret")
 zalo_3rd_app_client = Zalo3rdAppClient(zalo_info)
 ```
@@ -75,6 +77,8 @@ send_message = zalo_3rd_app_client.post('/me/message', token, {
 
 **Khởi tạo ZaloOA**
 ```
+from zalo.sdk.oa import ZaloOaInfo, ZaloOaClient
+
 zalo_info = ZaloOaInfo(oa_id="put_your_oauth_code_here", secret_key="put_your_secret_key_here")
 zalo_oa_client = ZaloOaClient(zalo_info)
 ```
@@ -269,6 +273,9 @@ qrcode = zalo_oa_client.post('/qrcode', params)
 
 **Khởi tạo ZaloOaOnbehalf**
 ```
+from zalo.sdk.app import ZaloAppInfo
+from zalo.sdk.oa import ZaloOaOnbehalf
+
 zalo_info = ZaloAppInfo(app_id=put_your_app_id_h, secret_key="put_your_secret_key_h")
 zalo_info.callback_url = 'put_your_callback_url_h'
 zalo_oa_on_behalf = ZaloOaOnbehalf(zalo_info)
@@ -457,6 +464,15 @@ reply_link_message = zalo_oa_on_behalf.post('/onbehalf/sendmessage/reply/links',
 ```
 
 ## Store API
+**Khởi tạo ZaloStore**
+```
+from zalo.sdk.oa import ZaloOaInfo
+from zalo.sdk.store import ZaloStoreClient
+
+oa_info = ZaloOaInfo(oa_id=oa_id, secret_key=secret_key)
+zalo_store_client = ZaloStoreClient(oa_info)
+```
+
 **Tạo sản phẩm**
 ```
 photos = [{
@@ -615,6 +631,9 @@ get_order = zalo_store_client.get('/store/order/getorder', params)
 
 **Khởi tạo ZaloStoreOnbehalf**
 ```
+from zalo.sdk.app import ZaloAppInfo
+from zalo.sdk.store import ZaloStoreOnbehalfClient
+
 zalo_info = ZaloAppInfo(app_id=app_id, secret_key="secret_key")
 zalo_info.callback_url = 'callback_url'
 zalo_store_on_behalf_client = ZaloStoreOnbehalfClient(zalo_info)
@@ -780,6 +799,16 @@ get_order = zalo_store_on_behalf_client.get('/store/onbehalf/order/getorder', pa
 ```
 
 ## Article API
+
+**Khởi tạo ZaloArticle**
+```
+from zalo.sdk.article.ZaloArticleClient import ZaloArticleClient
+from zalo.sdk.oa import ZaloOaInfo
+
+oa_info = ZaloOaInfo(oa_id=oa_id, secret_key=secret_key)
+zalo_article_client = ZaloArticleClient(oa_info)
+```
+
 **Tạo bài viết**
 ```
 cover = {
