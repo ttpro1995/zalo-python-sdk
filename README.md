@@ -592,18 +592,14 @@ category_photo = zalo_store_client.post('/store/upload/categoryphoto', params)
 
 **Chỉnh sửa đơn hàng**
 ```
-update = {
-    'name': 'put_your_category_name_here',
-    'desc': 'put_your_description_here',
-    'photo': photo_id,
-    'status': 0  # 0 - show | 1 - hide
-}
 data = {
-    'categoryid': category_id,
-    'category': update
+    'orderid': 'put_your_order_id_here',
+    'status': 1,
+    'reason': 'put_your_reason_here',
+    'cancelReason': 'put_your_cancel_reson_here'
 }
 params = {'data': data}
-category = zalo_store_client.post('/store/category/update', params)
+category = zalo_store_client.post('/store/order/update', params)
 ```
 
 **Danh sách đơn hàng**
