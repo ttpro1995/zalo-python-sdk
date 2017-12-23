@@ -1,2 +1,2 @@
-from ZaloStoreClient import ZaloStoreClient
-from ZaloStoreOnbehalfClient import ZaloStoreOnbehalfClient
+from .ZaloStoreClient import ZaloStoreClient
+from .ZaloStoreOnbehalfClient import ZaloStoreOnbehalfClient
